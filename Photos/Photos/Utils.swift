@@ -22,6 +22,10 @@ class Utils {
         return NSURL(string: urlStr)!
     }
     
+   // class func getPhotoUrl() -> NSURL {
+        
+   // }
+    
     class func getHashtagURL(hashtag: String) -> NSURL {
         let cid = clientID()
         let urlStr = "https://api.instagram.com/v1/tags/\(hashtag)/media/recent?client_id=\(cid)"
