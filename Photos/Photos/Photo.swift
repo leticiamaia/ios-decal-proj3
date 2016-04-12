@@ -17,6 +17,11 @@ class Photo {
     var username : String!
     /* The string of the url to the photo file. */
     var urlThumbnail : String!
+    /*Date of the photo. */
+    var datePosted: NSDate!
+    
+    /*If the photo was liked*/
+    var liked: Bool!
     
     /* Parses a NSDictionary and creates a photo object. */
     init (data: NSDictionary) {
@@ -24,7 +29,9 @@ class Photo {
         urlThumbnail = data.valueForKey("images")!.valueForKey("thumbnail")!.valueForKey("url") as! String
         url = data.valueForKey("images")!.valueForKey("standard_resolution")!.valueForKey("url") as! String
         username = data.valueForKey("user")!.valueForKey("username") as! String
-        print(url)
+        let datePostedRaw = data.valueForKey("created_time") as! String
+        datePosted = NSDate(timeIntervalSince1970 : Double(datePostedRaw)!)
+        liked = false
         // FILL ME IN
         // HINT: use nested .valueForKey() calls, and then cast using 'as! TYPE'
     }
