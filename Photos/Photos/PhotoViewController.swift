@@ -17,6 +17,7 @@ class PhotoViewController: UIViewController {
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var bigHeartImage: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     
     required init(coder aDecoder: NSCoder) {
@@ -36,23 +37,29 @@ class PhotoViewController: UIViewController {
         if let photo = photo {
 
             likesLabel.text = String(photo.likes) + " Likes"
-            userNameLabel.text = photo.username
+            userNameLabel.text = "By: " + photo.username
             
             let formatter = NSDateFormatter()
             formatter.dateStyle = NSDateFormatterStyle.ShortStyle
             formatter.timeStyle = .ShortStyle
             let datePostedString = formatter.stringFromDate(photo.datePosted)
-            
             timeLabel.text = datePostedString
-            let url = NSURL(string: photo.url)
-            let data = NSData(contentsOfURL : url!)
-            let image = UIImage(data: data!)
-            imageView.image = image
-            likeButton.setImage(UIImage(named: "filled-heart.png"), forState: UIControlState.Selected)
+            
+            if let cachedImage = Utils.cache.objectForKey(photo.url) as? UIImage {
+                imageView.image = cachedImage
+            } else {
+                let url = NSURL(string: photo.url)
+                let data = NSData(contentsOfURL : url!)
+                let image = UIImage(data: data!)
+                imageView.image = image
+                Utils.cache.setObject(image!, forKey: url!)
+            }
+            
+            likeButton.setImage(UIImage(named: "heart-white.png"), forState: UIControlState.Selected)
             if(photo.liked!) {
                 likeButton.setImage(UIImage(named: "filled-heart.png"), forState: UIControlState.Normal)
             } else {
-                likeButton.setImage(UIImage(named: "heart-empty.png"), forState: UIControlState.Normal)
+                likeButton.setImage(UIImage(named: "heart-white.png"), forState: UIControlState.Normal)
             }
 
         }
@@ -63,11 +70,18 @@ class PhotoViewController: UIViewController {
             if(photo.liked!) {
                 photo.liked! = false
                 photo.likes! -= 1
-                likeButton.setImage(UIImage(named: "heart-empty.png"), forState: UIControlState.Normal)
+                likeButton.setImage(UIImage(named: "heart-white.png"), forState: UIControlState.Normal)
+                
             } else {
                 photo.liked! = true
                 photo.likes! += 1
                 likeButton.setImage(UIImage(named: "filled-heart.png"), forState: UIControlState.Normal)
+                UIView.animateWithDuration(1.5, animations: {
+                    self.bigHeartImage.alpha = 1.0
+                })
+                UIView.animateWithDuration(1.5, animations: {
+                    self.bigHeartImage.alpha = 0.0
+                })
             }
             likesLabel.text = String(photo.likes) + " Likes"
         }

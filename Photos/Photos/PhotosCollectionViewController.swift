@@ -16,7 +16,6 @@ class PhotosCollectionViewController: UICollectionViewController {
 
         let api = InstagramAPI()
         api.loadPhotos(didLoadPhotos)
-        print(1)
         // FILL ME IN
     }
 
@@ -42,19 +41,22 @@ class PhotosCollectionViewController: UICollectionViewController {
             PhotoViewController
 
         photoView.photo = photos[indexPath.item]
-       // let navController = UINavigationController(rootViewController: photoView)
         navigationController?.pushViewController(photoView, animated: true)
-       // self.presentViewController(navController , animated: true, completion: nil)
     }
 
     
-    /* Creates a session from a photo's url to download data to instantiate a UIImage. 
+    /* Creates a session from a photo's url to download data to instantiate a UIImage.
        It then sets this as the imageView's image. */
     func loadImageForCell(photo: Photo, imageView: UIImageView) {
         let url = NSURL(string: photo.url)
-        let data = NSData(contentsOfURL : url!)
-        let image = UIImage(data: data!)
-        imageView.image = image
+        if let cachedImage = Utils.cache.objectForKey(photo.url) as? UIImage {
+            imageView.image = cachedImage
+        } else {
+            let data = NSData(contentsOfURL : url!)
+            let image = UIImage(data: data!)
+            imageView.image = image
+            Utils.cache.setObject(image!, forKey: url!)
+        }
     }
     
     /* Completion handler for API call. DO NOT CHANGE */

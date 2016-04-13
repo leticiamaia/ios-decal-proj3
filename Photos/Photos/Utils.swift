@@ -9,6 +9,7 @@
 import Foundation
 
 class Utils {
+    static let cache = NSCache()
     
     class func clientID() -> String {
         let path = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")
@@ -21,10 +22,6 @@ class Utils {
         let urlStr = "https://api.instagram.com/v1/media/popular?client_id=\(cid)"
         return NSURL(string: urlStr)!
     }
-    
-   // class func getPhotoUrl() -> NSURL {
-        
-   // }
     
     class func getHashtagURL(hashtag: String) -> NSURL {
         let cid = clientID()
