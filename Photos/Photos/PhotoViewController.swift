@@ -76,6 +76,7 @@ class PhotoViewController: UIViewController {
                 photo.liked! = true
                 photo.likes! += 1
                 likeButton.setImage(UIImage(named: "filled-heart.png"), forState: UIControlState.Normal)
+                view.bringSubviewToFront(bigHeartImage)
                 UIView.animateWithDuration(1.5, animations: {
                     self.bigHeartImage.alpha = 1.0
                 })

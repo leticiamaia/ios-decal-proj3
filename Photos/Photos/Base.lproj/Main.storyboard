@@ -111,7 +111,7 @@
                                     <action selector="like:" destination="cqb-LP-td1" eventType="touchUpInside" id="OFs-sk-JQ1"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled-heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="VYG-sJ-c1o">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled-heart.png" highlightedImage="filled-heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="VYG-sJ-c1o">
                                 <rect key="frame" x="200" y="189" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="frS-DX-fGm"/>
