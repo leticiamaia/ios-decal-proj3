@@ -102,17 +102,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTQ-cA-jks">
-                                <rect key="frame" x="275" y="553" width="40" height="40"/>
+                                <rect key="frame" x="275" y="555.5" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="RNc-dK-acg"/>
+                                    <constraint firstAttribute="width" constant="35" id="RNc-dK-acg"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="heart-white.png"/>
                                 <connections>
                                     <action selector="like:" destination="cqb-LP-td1" eventType="touchUpInside" id="OFs-sk-JQ1"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled-heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="VYG-sJ-c1o">
+                                <rect key="frame" x="200" y="189" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="frS-DX-fGm"/>
+                                    <constraint firstAttribute="height" constant="200" id="ipH-zc-ep2"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2dg-Ie-eXT">
-                                <rect key="frame" x="0.0" y="127" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="113" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2dg-Ie-eXT" secondAttribute="height" multiplier="1:1" id="dJs-4q-7Gh"/>
@@ -123,13 +130,6 @@
                                         <exclude reference="v3V-yt-Sa7"/>
                                     </mask>
                                 </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled-heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="VYG-sJ-c1o">
-                                <rect key="frame" x="200" y="189" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="frS-DX-fGm"/>
-                                    <constraint firstAttribute="height" constant="200" id="ipH-zc-ep2"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.32156862745098036" green="0.396078431372549" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,15 +148,15 @@
                             <constraint firstItem="2dg-Ie-eXT" firstAttribute="centerX" secondItem="81u-gs-nkd" secondAttribute="centerX" id="Ss2-uu-NrC"/>
                             <constraint firstItem="2dg-Ie-eXT" firstAttribute="centerX" secondItem="iTQ-cA-jks" secondAttribute="centerX" id="WLH-oz-Uoe"/>
                             <constraint firstItem="JLU-lI-twb" firstAttribute="firstBaseline" secondItem="avF-Sv-mFc" secondAttribute="baseline" constant="4.5" id="XF5-Cv-Cgp"/>
-                            <constraint firstItem="KSR-Us-lXg" firstAttribute="top" secondItem="iTQ-cA-jks" secondAttribute="bottom" constant="7" id="XIV-k9-BXt"/>
+                            <constraint firstItem="KSR-Us-lXg" firstAttribute="top" secondItem="iTQ-cA-jks" secondAttribute="bottom" constant="9.5" id="XIV-k9-BXt"/>
                             <constraint firstAttribute="trailing" secondItem="2dg-Ie-eXT" secondAttribute="trailing" id="ZFM-ex-IbM"/>
                             <constraint firstItem="avF-Sv-mFc" firstAttribute="leading" secondItem="mdt-2x-8CN" secondAttribute="leading" constant="14" id="bYJ-YA-NWZ"/>
                             <constraint firstItem="avF-Sv-mFc" firstAttribute="centerY" secondItem="iTQ-cA-jks" secondAttribute="centerY" constant="8.5" id="fc0-wj-oht"/>
                             <constraint firstItem="mdt-2x-8CN" firstAttribute="top" secondItem="rdU-Rh-TMW" secondAttribute="bottom" constant="8" id="jcH-Ug-Rl3"/>
                             <constraint firstItem="2dg-Ie-eXT" firstAttribute="leading" secondItem="81u-gs-nkd" secondAttribute="leading" id="m0p-lh-5pX"/>
-                            <constraint firstItem="2dg-Ie-eXT" firstAttribute="top" secondItem="mdt-2x-8CN" secondAttribute="bottom" constant="15" id="pCO-Va-dpQ"/>
+                            <constraint firstItem="2dg-Ie-eXT" firstAttribute="top" secondItem="mdt-2x-8CN" secondAttribute="bottom" constant="1" id="pCO-Va-dpQ"/>
                             <constraint firstItem="JLU-lI-twb" firstAttribute="trailing" secondItem="81u-gs-nkd" secondAttribute="trailingMargin" id="pb8-oy-xFr"/>
-                            <constraint firstItem="iTQ-cA-jks" firstAttribute="centerX" secondItem="81u-gs-nkd" secondAttribute="centerX" constant="-5" id="q5V-MP-ovM"/>
+                            <constraint firstItem="iTQ-cA-jks" firstAttribute="centerX" secondItem="81u-gs-nkd" secondAttribute="centerX" constant="-7.5" id="q5V-MP-ovM"/>
                             <constraint firstItem="iTQ-cA-jks" firstAttribute="top" secondItem="2dg-Ie-eXT" secondAttribute="bottom" constant="18" id="qjs-hc-fQV"/>
                             <constraint firstItem="iTQ-cA-jks" firstAttribute="top" secondItem="2dg-Ie-eXT" secondAttribute="bottom" constant="1" id="znr-fu-Wti"/>
                         </constraints>
