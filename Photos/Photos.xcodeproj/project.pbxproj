@@ -14,10 +14,10 @@
 		3A1683A31BE9B717009F39C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A21BE9B717009F39C5 /* Utils.swift */; };
 		3A1683A71BE9C593009F39C5 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A61BE9C593009F39C5 /* InstagramAPI.swift */; };
 		3A1683A91BE9C5A7009F39C5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A81BE9C5A7009F39C5 /* Photo.swift */; };
-		92B244AC1CBCDFF6001CF88F /* heart-empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 92B244AB1CBCDFF6001CF88F /* heart-empty.png */; };
-		92B244AE1CBCE356001CF88F /* filled-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 92B244AD1CBCE356001CF88F /* filled-heart.png */; };
+		9238D2BA1CC70CD2003689C6 /* filled-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9238D2B91CC70CD2003689C6 /* filled-heart.png */; };
+		9238D2BC1CC70CE7003689C6 /* heart-empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 9238D2BB1CC70CE7003689C6 /* heart-empty.png */; };
+		9238D2BE1CC70D05003689C6 /* heart-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 9238D2BD1CC70D05003689C6 /* heart-white.png */; };
 		92B244B11CBCEB5D001CF88F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B244AF1CBCEB5D001CF88F /* Main.storyboard */; };
-		92B244B31CBDCA0F001CF88F /* heart-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 92B244B21CBDCA0F001CF88F /* heart-white.png */; };
 		92B4884B1CB9BD54004B9711 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4884A1CB9BD54004B9711 /* PhotoCollectionViewCell.swift */; };
 		92B4884D1CBA1B2A004B9711 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4884C1CBA1B2A004B9711 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,10 +32,10 @@
 		3A1683A21BE9B717009F39C5 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3A1683A61BE9C593009F39C5 /* InstagramAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
 		3A1683A81BE9C5A7009F39C5 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		92B244AB1CBCDFF6001CF88F /* heart-empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "heart-empty.png"; path = "../../../../../Downloads/heart-empty.png"; sourceTree = "<group>"; };
-		92B244AD1CBCE356001CF88F /* filled-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filled-heart.png"; path = "../../../../../Downloads/filled-heart.png"; sourceTree = "<group>"; };
+		9238D2B91CC70CD2003689C6 /* filled-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filled-heart.png"; sourceTree = "<group>"; };
+		9238D2BB1CC70CE7003689C6 /* heart-empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-empty.png"; sourceTree = "<group>"; };
+		9238D2BD1CC70D05003689C6 /* heart-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-white.png"; sourceTree = "<group>"; };
 		92B244B01CBCEB5D001CF88F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		92B244B21CBDCA0F001CF88F /* heart-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-white.png"; sourceTree = "<group>"; };
 		92B4884A1CB9BD54004B9711 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		92B4884C1CBA1B2A004B9711 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +54,9 @@
 		3A1683831BE9B641009F39C5 = {
 			isa = PBXGroup;
 			children = (
+				9238D2BD1CC70D05003689C6 /* heart-white.png */,
+				9238D2BB1CC70CE7003689C6 /* heart-empty.png */,
+				9238D2B91CC70CD2003689C6 /* filled-heart.png */,
 				3A16838E1BE9B641009F39C5 /* Photos */,
 				3A16838D1BE9B641009F39C5 /* Products */,
 			);
@@ -71,14 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				92B244AF1CBCEB5D001CF88F /* Main.storyboard */,
-				92B244B21CBDCA0F001CF88F /* heart-white.png */,
 				3A1683A51BE9C54F009F39C5 /* API */,
 				3A1683A41BE9C548009F39C5 /* Views */,
 				3A1683A11BE9B70C009F39C5 /* Utils */,
 				3A16838F1BE9B642009F39C5 /* AppDelegate.swift */,
-				92B244AD1CBCE356001CF88F /* filled-heart.png */,
 				3A1683961BE9B642009F39C5 /* Assets.xcassets */,
-				92B244AB1CBCDFF6001CF88F /* heart-empty.png */,
 				3A1683981BE9B642009F39C5 /* LaunchScreen.storyboard */,
 				3A16839B1BE9B642009F39C5 /* Info.plist */,
 			);
@@ -170,12 +170,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9238D2BA1CC70CD2003689C6 /* filled-heart.png in Resources */,
+				9238D2BC1CC70CE7003689C6 /* heart-empty.png in Resources */,
+				9238D2BE1CC70D05003689C6 /* heart-white.png in Resources */,
 				3A16839A1BE9B642009F39C5 /* LaunchScreen.storyboard in Resources */,
 				92B244B11CBCEB5D001CF88F /* Main.storyboard in Resources */,
-				92B244B31CBDCA0F001CF88F /* heart-white.png in Resources */,
 				3A1683971BE9B642009F39C5 /* Assets.xcassets in Resources */,
-				92B244AC1CBCDFF6001CF88F /* heart-empty.png in Resources */,
-				92B244AE1CBCE356001CF88F /* filled-heart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
