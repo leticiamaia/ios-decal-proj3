@@ -26,7 +26,8 @@ popular company's API.
     * You must implement any necessary delegate methods
     * You must implement loadImageForCell
   * Tapping a cell takes you to a photo-specific view  with the following:
-    * UIImage of the Photo (from the URL)
+ dfasdfkasdjflasdf:x
+   * UIImage of the Photo (from the URL)
     * UILabels to display:
       * The poster's username
       * The date posted
